@@ -9,7 +9,8 @@ url : ('Roboto.woff') format('woff');
 .bloc_page {
 font-family: 'Roboto', sans-serif;
 width: 100%;
-margin: auto; }
+margin: auto;
+}
 
 /* Header */
 header {
@@ -19,15 +20,18 @@ header {
     width: 100%;
 
         form {
-            box-shadow: inset 5px 12px 5px -10px #CECECE ;
+            box-shadow: inset 5px 12px 5px -8px #CECECE ;
             display: flex;
             justify-content: center;
-            align-items: center;
+        }
+
+        form p { 
+            text-align: center;
         }
 
         form input {
             border: none;
-            font-size: 1em;
+            font-size: 3.3vw;
             font-weight: bold;
             background-color: #e6e6e6;
         }
@@ -40,6 +44,7 @@ header {
 
 .fa-map-marker-alt {
     padding-right: 2vw;
+    font-size: 3.8vw;
 }
 
 header img {
@@ -59,111 +64,113 @@ nav {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     padding-bottom: 8vw;
 }
 
 .presentation h1 {
-    width: 65%;
-    font-size: 1.5em;
+    width: 60%;
+    font-size: 5vw;
     text-align: center;
     margin-bottom: 0;
 }
 
 .presentation h2 {
     font-weight: normal;
-    font-size: 1.1em;
+    font-size: 3.7vw;
     width: 75%;
     text-align: center;
 }
 
 .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexbox;
     margin-top: 3vw;
-    padding: 3.5vw;
-    border-radius: 30px;
+    padding: 3vw;
+    border-radius: 40px;
     border: none;
-    background: linear-gradient(170deg,#FF79DA,#9356DC);
-    color: white;
-    font-size: 1em;
+    background: linear-gradient(170deg,$pink,$violet);
+    color: $blanc;
+    font-size: 3.4vw;
     box-shadow: 0 4px 4px #C0C0C0;
-}
 
-.btn:hover {
-    cursor: pointer;
+        &:hover {
+            cursor: pointer;
+        }
 }
 
 /*Fonctionnement*/
-.choix {
-    background-color: yellow;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.choix { display: flex;
     flex-direction: column;
-    padding-bottom: 7vw;
+    align-items: center;
+    padding-bottom: 6vw;
+
+    &.choix h2 {
+        width: 85%;
+        font-size: 4.5vw;
+    }
 }
 
-.choix h2 {
-    width: 85%;
-}
-
-.rond {
-    background-color: orange;
-    display: flex;
-    width: 80%;
-    border-radius: 25px;
-    margin-bottom: 3vw;
-    padding-left: 5vw;
+.choix__rond {
+    @include flexbox;
+    background-color: #F2F2F2;
+    box-shadow: 0 4px 4px #C0C0C0;
+    border-radius: 20px;
+    padding: 1vw;
+    margin-bottom: 4vw;
+    width: 73vw;
+    padding-right: 7vw;
     position: relative;
 }
 
-.nombre {
+.choix__rond h3 {
+    font-size: 3.5vw;
+    padding-left: 7vw;
+}
+
+.choix__nombre {
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexbox;
     left: -3vw;
-    top: 4vw;
-    color: white;
-    background-color: #9356DC;
+    color: $blanc;
+    background-color: $violet;
     border-radius: 20px;
     padding: 1vw;
     width: 3.5vw;
     height: 3.5vw;
 }
 
-.fa-mobile-alt, .fa-list-ul, .fa-store {
-    position: relative;
-    top: 4.5vw;
-    padding-right: 7vw;
+.choix__nombre p {
+    font-size: 3vw;
 }
 
-.nombre {
-    position: absolute;
+.fa-mobile-alt, .fa-list-ul, .fa-store { 
+    font-size: 4vw;
+    color: grey;
 }
-
 
 /*Restaurants*/
-.resto h2 {
-    width: 90%;
-    font-size: 5vw;
-}
-
 .resto {
     background-color: #e6e6e6;
-    display: flex;
+    @include flexbox;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: auto;
     padding-bottom: 7vw;
 }
 
-.cartes {
-    background-color: white;
+.resto h2 {
+    width: 90%;
+    font-size: 5vw;
+}
+
+.resto a {
+    text-decoration: none;
+    color: black;
+}
+
+.resto__cartes {
+    background-color: $blanc;
     border-radius: 16px 16px 16px 16px;
     box-shadow: 0 4px 4px #C0C0C0;
     object-fit: contain;
@@ -171,32 +178,32 @@ nav {
     margin-bottom: 4vw;
     width: 88vw;
     height: 62vw;
+    
+    .resto__legende {
+        padding-left: 3vw;
+    }
+        .resto__legende h3, h4 {
+            line-height: 1vw;
+        }
+
+            .resto__legende h3 {
+                font-size: 4vw;
+            }
+        
+                .resto__legende h4 {
+                    font-size: 3.5vw;
+                    font-weight: normal;
+                }
 }
 
-.legende {
-    padding-left: 3vw;
-}
 
-.legende h3, h4 {
-    line-height: 1vw;
-}
-
-.legende h3 {
-    font-size: 4vw;
-}
-
-.legende h4 {
-    font-size: 3.5vw;
-    font-weight: normal;
-}
-
-.cartes p {
+.resto__cartes p {
     position: absolute;
     top: 1vw;
     right: 3vw;
     font-size: 3vw;
     color: green;
-    background-color: #99E2D0;
+    background-color: $vert;
     padding: 1.5vw;
     border-radius: 2px;
     width: 15%;
@@ -210,7 +217,7 @@ nav {
     bottom: 6vw;
 }
 
-.cartes img {
+.resto__cartes img {
     width: 88vw;
     height: 45vw;
     object-fit: cover;
@@ -218,6 +225,15 @@ nav {
 }
 
 /* Footer */
+footer ul li a {
+    display: inline-block;
+    list-style-type: none;
+    text-decoration: none;
+    color: $blanc;
+    padding-left: 4vw;
+    font-size: 4vw;
+}
+
 .bas {
     background-color: black;
     padding: 1vw;
@@ -226,7 +242,7 @@ nav {
   
   .bas h2 {
     font-family: 'Shrikhand';
-    color: white;
+    color: $blanc;
     font-size: 4vw;
     padding-left: 5.3vw;
     font-weight: normal;
@@ -236,23 +252,14 @@ nav {
     list-style-type: none;
     padding-left: 0;
     margin-left: 1vw;
-    line-height: 1.6em;
+    line-height: 3.9vw;
   }
   
   .fa-utensils, .fa-hands-helping {
-    color: white;
+    color: $blanc;
     padding-left: 4vw;
-    font-size: 0.8em;
+    font-size: 3vw;
     width: 2%;
-  }
-  
-  footer ul li a {
-    display: inline-block;
-    list-style-type: none;
-    text-decoration: none;
-    color: white;
-    padding-left: 4vw;
-    font-size: 3.5vw;
   }
 
 } 
