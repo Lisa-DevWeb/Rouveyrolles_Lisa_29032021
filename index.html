@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/ec9c483aab.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="sass-cours/mobile.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="sous-pages/palette.html">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="sous-pages/palette.html">
-    <link rel="stylesheet" href="sous-pages/delice.html">
+  
     <title>Accueil Ohmyfood</title>
 </head>
+
 <body class="bloc_page">
-  
+ <!--spiner  -->
     <div class="loader">
         <div class="face">
           <div class="circle"></div>
@@ -25,7 +21,7 @@
           <div class="circle"></div>
         </div>
     </div>
-
+<!-- en-tete -->
     <header>
       <img src="images/logo/ohmyfood@2x.svg" alt="">
         <nav>
@@ -45,7 +41,7 @@
             Explorez nos restaurants
           </button>
     </section>
-
+<!-- guide -->
     <section class="choix">
       <h2>Fonctionnement</h2>
           <div class="choix__rond">
@@ -72,7 +68,7 @@
               <h3>Dégustez au restaurant</h3>
           </div>
     </section>
-
+<!-- menus -->
     <section class="resto">
       <h2>Restaurants</h2>
          
@@ -96,49 +92,55 @@
           </div>
         </a>
           
-        <div class="resto__cartes">
-          <img src="images/restaurants/note.jpg" alt="croquette de pomme de terre">
+        <a href="./sous-pages/note.html">
+          <div class="resto__cartes">
+            <img src="images/restaurants/note.jpg" alt="croquette de pomme de terre">
+                <div class="resto__legende">
+                  <h3>La note enchantée</h3>
+                  <h4>Charonne</h4>
+                    <a href="">
+                      <div>
+                        <p>Nouveau</p>
+                      </div>
+                    </a>
+                    <a href="">
+                      <div>
+                        <i class="far fa-heart"></i>
+                      </div>
+                    </a>
+                </div>
+          </div>
+        </a>
+
+        <a href="./sous-pages/francais.html">
+          <div class="resto__cartes">
+            <img src="images/restaurants/france.jpg" alt="oeuf poche">
               <div class="resto__legende">
-                <h3>La note enchantée</h3>
-                <h4>Charonne</h4>
-                  <a href="">
-                    <div>
-                      <p>Nouveau</p>
-                    </div>
-                  </a>
+                <h3>À la française</h3>
+                <h4>Cité Rouge</h4>
                   <a href="">
                     <div>
                       <i class="far fa-heart"></i>
                     </div>
                   </a>
               </div>
-        </div>
+          </div>
+        </a>
 
-        <div class="resto__cartes">
-          <img src="images/restaurants/france.jpg" alt="oeuf poche">
+        <a href="./sous-pages/delice.html">
+          <div class="resto__cartes">
+            <img src="images/restaurants/delice.jpg" alt="assiette de poisson">
             <div class="resto__legende">
-              <h3>À la française</h3>
-              <h4>Cité Rouge</h4>
+              <h3>Le délice des sens</h3>
+              <h4>Folie-Méricourt</h4>
                 <a href="">
                   <div>
                     <i class="far fa-heart"></i>
                   </div>
                 </a>
             </div>
-        </div>
-
-        <div class="resto__cartes">
-          <img src="images/restaurants/delice.jpg" alt="assiette de poisson">
-          <div class="resto__legende">
-            <h3>Le délice des sens</h3>
-            <h4>Folie-Méricourt</h4>
-              <a href="">
-                <div>
-                  <i class="far fa-heart"></i>
-                </div>
-              </a>
           </div>
-        </div>
+        </a>
     </section>
 
     <footer>
@@ -148,7 +150,7 @@
               <li><i class="fas fa-utensils"></i><a href="">Proposer un restaurant</a></li>
               <li><i class="fas fa-hands-helping"></i><a href="">Devenir partenaire</a></li>
               <li><a href="">Mentions légales</a></li>
-              <li><a href="">Contact</a></li>
+              <li><a href="mailto:contact@example.com">Contact</a></li>
           </ul>
         </div>
     </footer>
