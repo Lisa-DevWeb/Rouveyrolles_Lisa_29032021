@@ -1,0 +1,273 @@
+@media (min-width: 769px) and (max-width: 1025px) {
+  @font-face {
+    font-family: "robotolight";
+    src: url("/Police/roboto/roboto-light-webfont.woff") format("woff2"), url("/Police/roboto/roboto-light-webfont.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "shrikhandregular";
+    src: url("/Police/shrikhand/shrikhand-regular-webfont.woff") format("woff2"), url("/Police/shrikhand/shrikhand-regular-webfont.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  .bloc_page {
+    font-family: "Roboto", sans-serif;
+    width: 80%;
+    margin: auto;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  header form {
+    box-shadow: inset 5px 12px 5px -8px #CECECE;
+    display: flex;
+    justify-content: center;
+  }
+  header form p {
+    text-align: center;
+  }
+  header form input {
+    border: none;
+    font-size: 3vw;
+    font-weight: bold;
+    background-color: #e6e6e6;
+  }
+
+  .tit {
+    width: 35%;
+    padding: 10px;
+  }
+
+  .recherche {
+    width: 60%;
+  }
+
+  .fa-map-marker-alt {
+    padding-right: 2vw;
+    font-size: 3.6vw;
+  }
+
+  nav {
+    width: 100%;
+    border-top: 0px solid grey;
+    background-color: #e6e6e6;
+  }
+
+  .presentation {
+    background-color: #F2F2F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 5vw;
+  }
+
+  .presentation h1 {
+    width: 50%;
+    font-size: 4vw;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .presentation h2 {
+    font-weight: normal;
+    font-size: 2.8vw;
+    width: 70%;
+    text-align: center;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vw;
+    padding: 3vw;
+    border-radius: 40px;
+    border: none;
+    background: linear-gradient(170deg, #FF79DA, #9356DC);
+    color: #ffff;
+    font-size: 2.5vw;
+    box-shadow: 0 4px 4px #C0C0C0;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 400ms;
+  }
+  .btn:hover {
+    transform: scale(1.15);
+  }
+
+  .choix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .choix.choix h2 {
+    width: 100%;
+    font-size: 3.5vw;
+  }
+
+  .choix__rond {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F2F2;
+    box-shadow: 0 4px 4px #C0C0C0;
+    border-radius: 20px;
+    padding: 1vw;
+    margin-bottom: 4vw;
+    width: 56vw;
+    padding-right: 7vw;
+    position: relative;
+    transition-delay: 150ms;
+    transition: transform 450ms, background-color 300ms 150ms;
+  }
+
+  .choix__rond:hover {
+    background-color: #9356dc26;
+  }
+
+  .choix__rond h3 {
+    font-size: 2.5vw;
+    padding-left: 7vw;
+  }
+
+  .choix__nombre {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -4vw;
+    color: #ffff;
+    background-color: #9356DC;
+    border-radius: 30px;
+    padding: 1vw;
+    width: 3vw;
+    height: 3vw;
+  }
+
+  .choix__nombre p {
+    font-size: 2.5vw;
+  }
+
+  .fa-mobile-alt, .fa-list-ul, .fa-store {
+    font-size: 4vw;
+    padding-left: 2vw;
+    color: grey;
+  }
+
+  .resto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .resto h2 {
+    width: 100%;
+    font-size: 3.5vw;
+    margin-top: 0;
+  }
+
+  .resto a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .resto__cartes {
+    background-color: #ffff;
+    border-radius: 16px 16px 16px 16px;
+    box-shadow: 0 4px 4px #C0C0C0;
+    -o-object-fit: contain;
+       object-fit: contain;
+    position: relative;
+    width: 35vw;
+    height: 35vw;
+    margin: 2vw;
+    margin-bottom: 5vw;
+    margin-top: 0;
+  }
+  .resto__cartes .resto__legende {
+    padding-left: 2vw;
+  }
+  .resto__cartes .resto__legende h3, .resto__cartes h4 {
+    line-height: 0.8vw;
+  }
+  .resto__cartes .resto__legende h3 {
+    font-size: 2.4vw;
+  }
+  .resto__cartes .resto__legende h4 {
+    font-size: 2.1vw;
+    font-weight: normal;
+  }
+
+  .resto__cartes p {
+    position: absolute;
+    top: 1vw;
+    right: 3vw;
+    font-size: 2vw;
+    color: green;
+    background-color: #99E2D0;
+    padding: 1.2vw;
+    border-radius: 2px;
+    width: 22%;
+    text-align: center;
+  }
+
+  .resto .fa-heart {
+    position: absolute;
+    font-size: 3.5vw;
+    right: 2vw;
+    bottom: 3vw;
+  }
+
+  .resto__cartes img {
+    width: 35vw;
+    height: 25vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 16px 16px 0 0;
+  }
+
+  footer ul li a {
+    display: inline-block;
+    list-style-type: none;
+    text-decoration: none;
+    color: #ffff;
+  }
+
+  .bas {
+    background-color: black;
+    padding: 1vw;
+    position: relative;
+  }
+
+  .bas h2 {
+    font-family: "shrikhand";
+    color: #ffff;
+    font-size: 3vw;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 1vw;
+    padding-left: 5.7vw;
+  }
+
+  .bas ul {
+    list-style-type: none;
+    margin-left: 1vw;
+    line-height: 4vw;
+  }
+
+  .fa-utensils, .fa-hands-helping {
+    color: #ffff;
+    font-size: 2vw;
+    margin-right: 1vw;
+    width: 3%;
+  }
+}/*# sourceMappingURL=tablette.css.map */
