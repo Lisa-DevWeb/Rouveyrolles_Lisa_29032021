@@ -1,0 +1,11 @@
+{
+  "name": "css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch .sass-cours/css/tablette.scss:./css/tablette.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
