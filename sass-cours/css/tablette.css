@@ -1,3 +1,210 @@
+@media all and (min-width: 769px) and (max-width: 1025px) {
+  @font-face {
+    font-family: "robotolight";
+    src: url("/Police/roboto/roboto-light-webfont.woff") format("woff2"), url("/Police/roboto/roboto-light-webfont.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "shrikhandregular";
+    src: url("/Police/shrikhand/shrikhand-regular-webfont.woff") format("woff2"), url("/Police/shrikhand/shrikhand-regular-webfont.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  .bloc_page {
+    font-family: "Roboto", sans-serif;
+    width: 80%;
+    margin: auto;
+  }
+
+  .titre {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    border-top: 0px solid grey;
+    -o-object-fit: contain;
+       object-fit: contain;
+    position: relative;
+  }
+  .titre .fa-arrow-left {
+    position: absolute;
+    left: 5vw;
+    top: 2.5vw;
+    font-size: 4.2vw;
+    color: black;
+  }
+  .titre .titre_first img {
+    width: 35vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .titre_first {
+    padding: 1.5vw;
+  }
+
+  .grandimg {
+    width: 100%;
+    padding: 0;
+    z-index: 3;
+  }
+
+  .grandimg1 {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .conteneur {
+    z-index: 3;
+    height: 64vw;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+
+  .carte {
+    z-index: 7;
+    border-radius: 30px 30px 0 0;
+    background-color: #e6e6e6;
+    border-radius: 35px 35px 0px 0px;
+    position: relative;
+    bottom: 0;
+    margin-top: -40px;
+  }
+
+  .tigro {
+    display: flex;
+    justify-content: center;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    border-radius: 15vw;
+  }
+  .tigro.tigro h1 {
+    font-family: "Shrikhand";
+    font-weight: normal;
+    font-size: 5vw;
+    width: 80%;
+    margin-bottom: 1.6vw;
+  }
+  .tigro.tigro .fa-heart {
+    display: flex;
+    align-items: center;
+    font-size: 5vw;
+    padding-top: 4vw;
+    padding-right: 3vw;
+  }
+
+  .deux {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .pal {
+    width: 95%;
+  }
+
+  .menus {
+    margin-left: 4vw;
+    width: 92%;
+    padding-bottom: 2vw;
+    background-color: yellow;
+  }
+  .menus.menus h2 {
+    width: 11%;
+    font-size: 3.5vw;
+    font-weight: normal;
+    border-bottom: 3px solid #99E2D0;
+    padding-bottom: 1.2vw;
+  }
+
+  .menus_carte {
+    background-color: white;
+    border-radius: 17px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vw;
+    height: 15vw;
+    width: 80%;
+    background-color: orange;
+  }
+  .menus_carte.menus_carte h3 {
+    font-size: 3vw;
+    margin-bottom: 0;
+    margin-top: 2.8vw;
+    padding-left: 2vw;
+  }
+
+  .menus_leg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 10vw;
+    position: relative;
+  }
+  .menus_leg.menus_leg h4 {
+    font-size: 3vw;
+    font-weight: normal;
+    padding-left: 2vw;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    background-color: palegoldenrod;
+  }
+  .menus_leg.menus_leg span {
+    font-size: 4vw;
+  }
+  .menus_leg.menus_leg h5 {
+    margin-top: 1vw;
+    background-color: #00ccff;
+  }
+
+  .coche {
+    background-color: #99E2D0;
+    height: 15vw;
+    width: 10vw;
+    position: absolute;
+    top: -6.5vw;
+    right: -13vw;
+    display: block;
+  }
+  .coche.coche:hover {
+    visibility: visible;
+  }
+
+  .fa-check-circle {
+    background-color: orangered;
+    display: flex;
+    justify-content: center;
+  }
+
+  .bouton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4.9vw;
+  }
+
+  .btn2 {
+    width: 50%;
+    padding: 3vw;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(170deg, #FF79DA, #9356DC);
+    color: #ffff;
+    font-size: 3.4vw;
+    box-shadow: 0 4px 4px #C0C0C0;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 400ms;
+  }
+  .btn2:hover {
+    transform: scale(1.15);
+  }
+}
 @media (min-width: 769px) and (max-width: 1025px) {
   @font-face {
     font-family: "robotolight";
