@@ -1,0 +1,527 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+// Media tablette accueil
+@media all and (min-width: 1026px) {
+    @font-face {
+        font-family: 'robotolight';
+        src: url('/Police/roboto/roboto-light-webfont.woff') format('woff2'),
+             url('/Police/roboto/roboto-light-webfont.woff2') format('woff');
+        font-weight: normal;
+        font-style: normal;
+}
+
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('/Police/shrikhand/shrikhand-regular-webfont.woff') format('woff2'),
+         url('/Police/shrikhand/shrikhand-regular-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bloc_page {
+font-family: 'Roboto', sans-serif;
+width: 80%;
+margin: auto;
+}
+
+// Loader
+// .loader {
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     @include flexbox;
+//     background-color: white;
+// }
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+        form {
+            display: flex;
+            justify-content: flex-end;
+            background: linear-gradient(170deg, $pink,$violet);
+        }
+
+        form p { 
+            text-align: center;
+        }
+
+        form input {
+            border: none;
+            font-size: 2vw;
+            font-weight: bold;
+            background-color: #e6e6e6;
+        }
+
+}
+
+.tit {
+    width: 20%;
+    padding: 10px;
+    background:#b85299;
+}
+
+.recherche {
+    width: 60%;
+}
+
+.fa-map-marker-alt {
+    padding-right: 2vw;
+    font-size: 2.5vw;
+}
+
+nav {
+    width: 90%;
+    border-top: 0px solid grey;
+    background-color: #e6e6e6;
+}
+
+/*Presentation*/
+.presentation {
+    background-color: #F2F2F2;
+    @include flexbox;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 5vw;
+}
+
+.presentation h1 {
+    width: 100%;
+    font-size: 3.5vw;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.presentation h2 {
+    font-weight: normal;
+    font-size: 2.7vw;
+    width: 75%;
+    text-align: center;
+}
+
+.btn {
+    @include flexbox;
+    margin-top: 1vw;
+    padding: 2vw;
+    border-radius: 60px;
+    border: none;
+    background: linear-gradient(170deg, $pink,$violet);
+    color: $blanc;
+    font-size: 2vw;
+    box-shadow: 0 4px 4px #C0C0C0;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 400ms;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+}
+
+/*Fonctionnement*/
+.choix { display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1.5vw;
+
+    &.choix h2 {
+        width: 35%;
+        font-size: 3.5vw;
+        margin-bottom: 4vw;
+        text-align: center;
+        text-decoration-line: underline overline;
+        text-underline-offset: 0.7rem;
+        text-decoration-color: $violet;
+    }
+}
+
+.choix__rond {
+    @include flexbox;
+    background-color: #F2F2F2;
+    box-shadow: 0 4px 4px #C0C0C0;
+    border-radius: 35px;
+    padding: 0.7vw;
+    margin-bottom: 4vw;
+    width: 45vw;
+    position: relative;
+    transition-delay: 150ms;
+    transition: transform 450ms, background-color 300ms 150ms;
+}
+
+.choix__rond:hover {
+    background-color: #9356dc26;
+}
+
+.choix__rond h3 {
+    font-size: 2.3vw;
+    padding-left: 3.5vw;
+}
+
+.choix__nombre {
+    position: absolute;
+    @include flexbox;
+    left: -3vw;
+    color: $blanc;
+    background-color: $violet;
+    border-radius: 40px;
+    padding: 0.5vw;
+    width: 3vw;
+    height: 3vw;
+}
+
+.choix__nombre p {
+    font-size: 2.5vw;
+}
+
+.fa-mobile-alt, .fa-list-ul, .fa-store { 
+    font-size: 3vw;
+    color: grey;
+}
+
+/*Restaurants*/
+.resto {
+    background: #F2F2F2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    border-radius: 50px 50px 0 0;
+    height: auto;
+    padding-bottom: 2vw;
+}
+
+.resto h2 {
+    width: 100%;
+    font-size: 3.5vw;
+    padding: 1vw;
+    text-align: center;
+    text-decoration-line: underline overline;
+    text-underline-offset: 0.7rem;
+    text-decoration-color: $vert;
+}
+
+.resto a {
+    text-decoration: none;
+    color: black;
+}
+
+.resto__cartes {
+    background-color: $blanc;
+    border-radius: 16px 16px 16px 16px;
+    box-shadow: 0 4px 4px #C0C0C0;
+    object-fit: contain;
+    position: relative;
+    margin: 1.5vw;
+    margin-bottom: 4vw;
+    width: 35vw;
+    height: 35vw;
+    margin-top: 1vw;
+    
+    .resto__legende {
+        padding-left: 2vw;
+    }
+        .resto__legende h3, h4 {
+            line-height: 1vw;
+        }
+
+            .resto__legende h3 {
+                font-size: 2.5vw;
+            }
+        
+                .resto__legende h4 {
+                    font-size: 2.2vw;
+                    font-weight: normal;
+                }
+}
+
+.resto__cartes p {
+    position: absolute;
+    top: 1vw;
+    right: 3vw;
+    font-size: 2vw;
+    color: green;
+    background-color: #99E2D0;
+    padding: 1.2vw;
+    border-radius: 2px;
+    width: 22%;
+    text-align: center;
+}
+
+.resto .fa-heart {
+    position: absolute;
+    font-size: 3.5vw;
+    right: 2vw;
+    bottom: 3vw;
+}
+
+.resto__cartes img {
+    width: 35vw;
+    height: 25vw;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+/* Footer */
+footer ul li a {
+    display: inline-block;
+    list-style-type: none;
+    text-decoration: none;
+    color: $blanc;
+    padding-left: 4vw;
+    font-size: 3.6vw;
+}
+
+.bas {
+    background-color: black;
+    padding: 1vw;
+    position: relative;
+  }
+  
+  .bas h2 {
+    font-family: 'shrikhand';
+    color: $blanc;
+    font-size: 4vw;
+    padding-left: 5.3vw;
+    font-weight: normal;
+  }
+  
+  .bas ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 1vw;
+    line-height: 6vw;
+  }
+  
+  .fa-utensils, .fa-hands-helping {
+    color: $blanc;
+    padding-left: 4vw;
+    font-size: 3vw;
+    width: 2%;
+  }
+
+}
+
+@media all and (min-width: 1026px) {
+    @font-face {
+        font-family: 'robotolight';
+        src: url('/Police/roboto/roboto-light-webfont.woff') format('woff2'),
+             url('/Police/roboto/roboto-light-webfont.woff2') format('woff');
+        font-weight: normal;
+        font-style: normal;
+}
+
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('/Police/shrikhand/shrikhand-regular-webfont.woff') format('woff2'),
+         url('/Police/shrikhand/shrikhand-regular-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bloc_page {
+font-family: 'Roboto', sans-serif;
+width: 80%;
+margin: auto;
+background-color: #99E2D0;
+}
+
+// Menus
+.titre {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    border-top: 0px solid grey;
+    object-fit: contain;
+    position: relative;
+
+    .fa-arrow-left {
+        position: absolute;
+        left: 5vw;
+        top: 2.5vw;
+        font-size: 3.2vw;
+        color: black;
+    }
+
+    .titre_first img {
+        width: 30vw;
+        object-fit: cover;
+    }
+  }
+
+  .titre_first {
+      padding: 1.5vw;
+  }
+
+  .titre nav {
+      width: 100%;
+      border-radius: 40px 40px 0 0;
+  }
+
+.grandimg {
+    width: 100%;
+    padding: 0;
+    z-index: 3;
+    border-radius: 40px 40px 0 0;
+}
+
+.grandimg1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px 40px 0 0;
+}
+
+.conteneur {
+    z-index: 3;
+    height: 64vw;
+    object-fit: contain;
+}
+
+.carte {
+    z-index: 7;
+    background-color: #e6e6e6;
+    position: relative;
+    bottom: 0;
+    margin-top: -40px;
+}
+
+.tigro  {
+    display: flex;
+    justify-content: center;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    border-radius: 15vw;
+
+   &.tigro h1 {
+    font-family: 'Shrikhand';
+    font-weight: normal;
+    font-size: 5vw;
+    width: 80%;
+    margin-bottom: 1.6vw;
+   }
+
+    &.tigro .fa-heart {
+        display: flex;
+        align-items: center;
+        font-size: 5vw;
+        padding-top: 4vw;
+        padding-right: 3vw;
+    }
+}
+
+.deux {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pal {
+    width: 95%;
+}
+
+.menus {
+    margin-left: 4vw;
+    width: 92%;
+    padding-bottom: 2vw;
+
+    &.menus h2 {
+        width: 11%;
+        font-size: 3.5vw;
+        font-weight: normal;
+        border-bottom: 3px solid $vert;
+        padding-bottom: 1.2vw;
+    } 
+}
+
+.menus_carte {
+    background-color: white;
+    background-color: orange;
+    width: 80%;
+    border-radius: 17px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vw;
+    height: 15vw;
+
+    &.menus_carte h3 {
+        font-size: 3vw;
+        margin-bottom: 0;
+        margin-top: 2.8vw;
+        padding-left: 2vw;
+    }
+}
+
+.menus_leg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 10vw;
+
+    &.menus_leg h4 {
+        width: 100%;
+        font-size: 2.8vw;
+        font-weight: normal;
+        padding-left: 2vw;
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    &.menus_leg span {
+        font-size: 4vw;
+    }
+
+    &.menus_leg h5 {
+        margin-top: 1vw;
+    }
+}
+
+.coche { 
+    background-color: #99E2D0;
+    width: 10vw;
+    height: 15vw;
+    position: relative;
+    top: -6.5vw;
+    right: -10vw;
+    visibility: visible;
+    display: block;
+
+    &.coche:hover {
+        visibility: visible;
+    } 
+}
+
+.fa-check-circle {
+    background-color: orangered;
+}
+
+// Bouton
+.bouton {
+    @include flexbox;
+    padding: 4.9vw;
+}
+
+.btn2 {
+    width: 45%;
+    padding: 3vw;
+    border-radius: 40px;
+    border: none;
+    background: linear-gradient(170deg, $pink,$violet);
+    color: $blanc;
+    font-size: 3.4vw;
+    box-shadow: 0 4px 4px #C0C0C0;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 400ms;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+}
+}
