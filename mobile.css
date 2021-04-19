@@ -425,7 +425,7 @@
     height: 15vw;
     position: relative;
     top: -35px;
-    visibility: collapse;
+    visibility: visible;
     display: block;
   }
   .coche.coche:hover {
