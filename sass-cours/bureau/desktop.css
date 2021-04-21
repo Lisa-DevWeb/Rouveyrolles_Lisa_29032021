@@ -267,28 +267,20 @@
   }
 
   .emptyheart {
-    transform: scale(1);
-    transition: transform 400ms;
+    opacity: 1;
   }
 
-  .fullheart {
-    transform: scaleY(0);
-    transform-origin: 100% bottom;
-    transition: all 450ms;
-    transition-timing-function: linear;
+  .emptyheart {
+    background-position: -150px;
   }
 
   .emptyheart:hover {
-    opacity: 0;
-  }
-
-  .emptyheart:hover + .fullheart {
-    transform: scaleY(1);
-    transition-duration: 1s;
+    transition-duration: 2s;
     background: linear-gradient(170deg, #FF79DA, #9356DC);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    font-weight: bold;
   }
 
   /* Footer */
