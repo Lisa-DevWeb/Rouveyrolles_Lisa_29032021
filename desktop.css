@@ -271,16 +271,18 @@
   }
 
   .emptyheart {
-    background-position: -150px;
+    background-position: 0px 150px;
   }
 
   .emptyheart:hover {
-    transition-duration: 2s;
+    transform: translateY(1);
+    transition-duration: 1s;
     background: linear-gradient(170deg, #FF79DA, #9356DC);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     font-weight: bold;
+    background-position: 0px;
   }
 
   /* Footer */
