@@ -54,9 +54,9 @@ header {
 
         form input {
             border: none;
-            font-size: 1.5vw;
+            font-size: 1.2vw;
             font-weight: bold;
-            background-color: #e6e6e6;
+            background-color: white;
         }
 
 }
@@ -64,7 +64,7 @@ header {
 .tit {
     width: 16%;
     padding: 10px;
-    background-color: none;
+    background-color: transparent;
     z-index: 7;
     position: absolute;
 }
@@ -75,7 +75,7 @@ header {
 
 .fa-map-marker-alt {
     padding-right: 2vw;
-    font-size: 2.5vw;
+    font-size: 2.3vw;
 }
 
 nav {
@@ -140,8 +140,9 @@ nav {
         font-size: 2vw;
         margin-bottom: 4vw;
         text-align: center;
-        text-decoration-line: underline overline;
-        text-underline-offset: 0.5rem;
+        border-bottom: 1px solid $violet;
+        padding-bottom: 1vw;
+        letter-spacing: 1px;
         text-decoration-color: $violet;
     }
 }
@@ -175,12 +176,12 @@ nav {
     color: $blanc;
     background-color: $violet;
     border-radius: 40px;
-    width: 3vw;
-    height: 3vw;
+    width: 2.5vw;
+    height: 2.5vw;
 }
 
 .choix__nombre p {
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 .fa-mobile-alt, .fa-list-ul, .fa-store { 
@@ -201,13 +202,19 @@ nav {
 }
 
 .resto h2 {
-    width: 100%;
+    width: 30%;
     font-size: 2vw;
     padding: 1vw;
     text-align: center;
-    text-decoration-line: underline overline;
-    text-underline-offset: 0.5rem;
+    border-bottom: 1px solid $vert;
+    padding-bottom: 1vw;
+    letter-spacing: 1px;
     text-decoration-color: $vert;
+}
+
+.fonc {
+    @include flexbox;
+    width: 100%;
 }
 
 .resto a {
@@ -221,7 +228,6 @@ nav {
     box-shadow: 0 4px 4px #C0C0C0;
     object-fit: contain;
     position: relative;
-    box-shadow: 10px solid black;
     margin: 1.5vw;
     margin-bottom: 2vw;
     width: 30vw;
@@ -235,7 +241,7 @@ nav {
         }
 
             .resto__legende h3 {
-                font-size: 1.8vw;
+                font-size: 1.7vw;
             }
         
                 .resto__legende h4 {
@@ -264,34 +270,45 @@ nav {
     bottom: 2vw;
 }
 
-.resto_legende .emptyheart {
-    background-color: brown;
-    transform: scale(0.1);
-    transition: transform 4000ms;
-//     $trans-dur: 2000ms;
-// transform: translateY(100%);
-// transition: transform $trans-dur;
-}
-
-.resto__legende .fullheart {
-    background: linear-gradient(170deg, $pink,$violet);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-.fa-heart .emptyheart:hover + .fa-heart .fullheart {
-    transform: translateY(100%);
-    transform: transform 4000ms;
-    background: linear-gradient(170deg, $pink,$violet);
-}
-
 .resto__cartes img {
     width: 30vw;
     height: 18vw;
     object-fit: cover;
     border-radius: 16px 16px 0 0;
 }
+
+.emptyheart {
+    background-position: 0px 150px;
+  }
+
+  .emptyheart:hover {
+    transition-duration: 2s;
+    background: linear-gradient(170deg,$violet, $pink);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    background-position: 0px;
+  }
+
+// .emptyheart {
+//     opacity: 1;
+//   }
+
+//   .emptyheart {
+//     background-position: 0px 150px;
+//   }
+
+//   .emptyheart:hover {
+//     transform: translateY(1);
+//     transition-duration: 2s;
+//     background: linear-gradient($pink,$violet);
+//     background-clip: text;
+//     -webkit-background-clip: text;
+//     color: transparent;
+//     font-weight: bold;
+//     background-position: 0px;
+//   }
 
 /* Footer */
 footer ul li a {
@@ -333,6 +350,7 @@ footer ul li a {
 
 }
 
+// Menus
 @media all and (min-width: 1026px) {
     @font-face {
         font-family: 'robotolight';
@@ -427,19 +445,49 @@ margin: auto;
    &.tigro h1 {
     font-family: 'Shrikhand';
     font-weight: normal;
-    font-size: 4vw;
+    font-size: 3.5vw;
     width: 80%;
     margin-bottom: 1.6vw;
    }
 
-    &.tigro .fa-heart {
+    &.tigro .emptyheart {
         display: flex;
         align-items: center;
-        font-size: 5vw;
-        padding-top: 4vw;
+        font-size: 3.5vw;
+        padding-top: 3.5vw;
         padding-right: 3vw;
     }
 }
+
+.emptyheart {
+    background-position: 0px 150px;
+    opacity: 1;
+  }
+
+  .emptyheart:hover {
+    transition-duration: 2s;
+    background: linear-gradient(170deg,$violet, $pink);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    background-position: 0px;
+  }
+
+//   .emptyheart {
+//     background-position: 0px 150px;
+//     // opacity: 1;
+//   }
+
+//   .emptyheart:hover {
+//     transition-duration: 2s;
+//     background: linear-gradient($pink,$violet);
+//     background-clip: text;
+//     -webkit-background-clip: text;
+//     color: transparent;
+//     font-weight: bold;
+//     background-position: 0px;
+//   }
 
 .deux {
     display: flex;
@@ -467,15 +515,21 @@ margin: auto;
 
 .menus_carte {
     background-color: white;
-    width: 80%;
-    border-radius: 17px;
+    width: 100%;
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
     margin-bottom: 3vw;
     height: 10vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 4px #C0C0C0;
 
     &.menus_carte h3 {
-        font-size: 2.3vw;
+        font-size: 2.2vw;
         margin-bottom: 0;
         margin-top: 2vw;
         padding-left: 2vw;
@@ -487,7 +541,12 @@ margin: auto;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    height: 7vw;
+    height: 5vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 2;
+    padding-top: 1vw;
 
     &.menus_leg h4 {
         width: 100%;
@@ -499,33 +558,131 @@ margin: auto;
         margin-top: 0;
     }
 
-    &.menus_leg span {
+    &.menus_leg .prix {
         font-size: 4vw;
+        height: 40px;
     }
 
     &.menus_leg h5 {
-        margin-top: 1vw;
+        margin-top: 0vw;
         font-size: 2vw;
     }
 }
 
-.coche { 
-    background-color: #99E2D0;
-    width: 10vw;
-    height: 10vw;
-    position: relative;
-    top: -4.7vw;
-    right: -10vw;
-    visibility: visible;
-    display: block;
+// @keyframes opacite {
+//     from {
+//         opacity: 0;
+//     }
 
-    &.coche:hover {
-        visibility: visible;
-    } 
+//     to {
+//         opacity: 1;
+//     }
+// }
+
+// .menus_carte:nth-child(1) {
+//     animation: opacite 2s;
+// }
+
+// .menus_carte:nth-child(2) {
+//     animation-delay : 2s;
+//     animation-name: opacite;
+//     @include opacite;
+// }
+
+// .menus_carte:nth-child(3) {
+//     animation-delay : 3s;
+//     animation-name: opacite;
+//     @include opacite;
+// }
+
+// .menus_carte:nth-child(4) {
+//     animation-delay : 4s;
+//     animation-name: opacite;
+//     @include opacite;
+// }
+
+// .menus_carte:nth-child(5) {
+//     animation-delay : 5s;
+//     animation-name: opacite;
+//     @include opacite;
+// }
+
+// .menus_carte:nth-child(6) {
+//     animation-delay : 6s;
+//     animation-name: opacite;
+//     @include opacite;
+// }
+
+// .menus_carte:nth-child(7) {
+//     animation-delay : 7s;
+//     animation-name: opacite;
+//     @include opacite;
+// }
+
+// .menus_carte:nth-child(8) {
+//     animation-delay : 7s;
+//     animation-name: opacite;
+//     @include opacite;
+// }
+
+// .menus_carte:nth-child(9) {
+//     animation-delay : 8s;
+//     animation-name: opacite;
+//     @include opacite;
+// }
+
+.prix {
+    width: 10%;
+    transition: width 1s;
+    padding-right: 3vw;
+    transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}
+
+.coche {
+        background-color: #99E2D0;
+        position: absolute;
+        right: -11vw;
+        top: 0vw;
+        margin: 0;
+        width: 10%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        transition-timing-function: cubic-bezier(0,0,1,1);
+        transition: width 1s;
+        padding-left: 3vw;
+}
+
+.menus_carte:hover > .menus_leg {
+    cursor: pointer;
+}
+
+.menus_carte:hover > .menus_leg > .coche {
+    width: 17vw;
+}
+
+.menus_carte:hover > .menus_leg > .prix {
+   width: 16vw;
+}
+
+.menus_carte:hover > .menus_leg > .coche > .fa-check-circle {
+    animation: rotation 1s;
+}
+
+@keyframes rotation {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 .fa-check-circle {
-    background-color: orangered;
+    font-weight: bold;
+    color: white;
+    font-size: 3.3vw;
 }
 
 // Bouton
@@ -541,7 +698,7 @@ margin: auto;
     border: none;
     background: linear-gradient(170deg, $pink,$violet);
     color: $blanc;
-    font-size: 3vw;
+    font-size: 2.8vw;
     cursor: pointer;
     transform: scale(1);
     transition: transform 400ms;
@@ -553,4 +710,5 @@ margin: auto;
             box-shadow: 0 7px 7px rgb(78, 78, 78);
         }
 }
+
 }
