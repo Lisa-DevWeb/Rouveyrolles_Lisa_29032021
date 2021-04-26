@@ -148,6 +148,8 @@
     text-overflow: ellipsis;
     z-index: 1;
     position: relative;
+    -webkit-animation: opacite 2s linear forwards 1s;
+            animation: opacite 2s linear forwards 1s;
   }
   .menus_carte.menus_carte h3 {
     font-size: 2.5vw;
@@ -184,6 +186,23 @@
     font-size: 2vw;
   }
 
+  @-webkit-keyframes opacite {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes opacite {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   .prix {
     width: 10%;
     transition: width 1s;
