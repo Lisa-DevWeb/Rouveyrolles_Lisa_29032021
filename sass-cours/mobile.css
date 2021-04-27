@@ -18,6 +18,128 @@
     margin: auto;
   }
 
+  .loader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    background: fixed;
+    background-attachment: fixed;
+    -webkit-animation: opaciteInverse 3s linear forwards 2s;
+            animation: opaciteInverse 3s linear forwards 2s;
+    -webkit-animation: scale 3s linear forward 2s;
+            animation: scale 3s linear forward 2s;
+    position: absolute;
+    position: fixed;
+    background-color: white;
+  }
+
+  .circleRight {
+    border: 10px solid white;
+    border-right: 10px solid #9356DC;
+    border-left: 10px solid #FF79DA;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    -webkit-animation: spiner 3s linear infinite;
+            animation: spiner 3s linear infinite;
+    z-index: 6;
+    margin: auto;
+    position: absolute;
+    transform: scale(0);
+  }
+
+  .circleLeft {
+    border: 10px solid white;
+    border-top: 10px solid #99E2D0;
+    border-bottom: 10px solid #99E2D0;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    -webkit-animation: spin 3s linear infinite;
+            animation: spin 3s linear infinite;
+    z-index: 4;
+    margin: auto;
+    transform: scale(0);
+  }
+
+  .text {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #40b698;
+    z-index: 2;
+    width: 100%;
+  }
+
+  @-webkit-keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes spiner {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes spiner {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  @-webkit-keyframes opaciteInverse {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes opaciteInverse {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
   /* Header */
   header {
     display: flex;
@@ -243,11 +365,7 @@
   .emptyheart:hover {
     transition-duration: 2s;
     background: #FF79DA;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
     font-weight: bold;
-    background-position: 0px;
   }
 
   .resto__cartes img {
@@ -372,19 +490,36 @@
     font-size: 5vw;
     padding-top: 7vw;
     padding-right: 3vw;
+    z-index: 1;
   }
 
-  .emptyheart {
-    background-position: 0px 100px;
-    opacity: 1;
-  }
-
-  .emptyheart:hover {
-    transition-duration: 1s;
+  .fullheart {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -12vw;
+    font-size: 5vw;
+    padding-top: 7vw;
+    padding-right: 3vw;
+    z-index: 3;
     background: linear-gradient(170deg, #9356DC, #FF79DA);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    opacity: 0;
+  }
+
+  .fa-heart:hover {
+    cursor: pointer;
+    background-color: rosybrown;
+  }
+
+  .fa-heart:hover > .emptyheart {
+    opacity: 0;
+  }
+
+  .fa-heart:hover > .fullheart {
+    opacity: 1;
   }
 
   .deux {
@@ -418,12 +553,13 @@
     flex-wrap: nowrap;
     position: relative;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 18px;
     box-shadow: 0 4px 4px #C0C0C0;
     margin-bottom: 3vw;
     -webkit-animation: opacite 3s linear forwards 2s;
             animation: opacite 3s linear forwards 2s;
     overflow: hidden;
+    z-index: 4;
   }
 
   @-webkit-keyframes opacite {
@@ -446,17 +582,18 @@
   .text {
     margin-left: 20px;
     width: 100%;
-    height: 20vw;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    flex: 1;
+    transition: width 1s;
   }
   .text.text h3 {
     font-size: 3.6vw;
     margin-bottom: 1vw;
     margin-top: 5vw;
     width: 100%;
-    white-space: pre;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -465,36 +602,31 @@
     font-weight: normal;
     margin-top: 0;
     width: 100%;
-    white-space: pre;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  .text:hover h4, .text:hover h3 {
-    width: 80%;
-  }
-
-  .court:hover {
-    width: 100%;
+  .text:hover {
+    width: 50%;
   }
 
   .prix {
-    margin-right: 20px;
-    width: 15%;
+    width: 10%;
     height: 18vw;
     display: flex;
-    align-items: flex-end;
     transition-timing-function: cubic-bezier(0, 0, 1, 1);
     transition: width 1s;
   }
   .prix.prix h5 {
-    font-size: 3vw;
+    font-size: 3.3vw;
+    padding-top: 4.5vw;
   }
 
   .coche {
     background-color: #99E2D0;
     position: absolute;
-    right: -14vw;
+    right: -15vw;
     top: 0;
     margin: 0;
     width: 10%;
@@ -504,7 +636,7 @@
     align-items: center;
     transition-timing-function: cubic-bezier(0, 0, 1, 1);
     transition: width 1s;
-    padding-left: 5vw;
+    padding-left: 6vw;
   }
 
   .menus_carte:hover {
@@ -512,11 +644,11 @@
   }
 
   .menus_carte:hover > .coche {
-    width: 24vw;
+    width: 25.5vw;
   }
 
   .menus_carte:hover > .prix {
-    width: 30vw;
+    width: 28.4vw;
   }
 
   .menus_carte:hover > .coche > .fa-check-circle {
@@ -544,7 +676,7 @@
   .fa-check-circle {
     color: white;
     font-weight: bold;
-    font-size: 4.3vw;
+    font-size: 4.8vw;
   }
 
   .bouton {

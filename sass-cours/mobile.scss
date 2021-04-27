@@ -26,13 +26,101 @@ margin: auto;
 }
 
 // Loader
-// .loader {
-//     width: 100%;
-//     height: 100%;
-//     position: absolute;
-//     @include flexbox;
-//     background-color: white;
-// }
+.loader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    background: fixed;
+    background-attachment: fixed;
+    animation: opaciteInverse 3s linear forwards 2s;
+    animation: scale 3s linear forward 2s;
+    position: absolute;
+    position: fixed;
+    background-color: white;
+    // transform: scale(0.5);
+}
+
+.circleRight {
+    // Creation loader
+    border: 10px solid white;
+    border-right: 10px solid #9356DC;
+    border-left: 10px solid #FF79DA;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    animation: spiner 3s linear infinite;
+    z-index: 6;
+    margin: auto;
+    position: absolute;
+     transform: scale(0);
+}
+
+.circleLeft {
+    border: 10px solid white;
+    border-top: 10px solid #99E2D0;
+    border-bottom: 10px solid #99E2D0;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    animation: spin 3s linear infinite;
+    z-index: 4;
+    margin: auto;
+     transform: scale(0);
+}
+
+.text {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #40b698;
+    z-index: 2;
+    width: 100%;
+}
+
+@keyframes spin {
+    0% {
+         transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+@keyframes spiner {
+    0% {
+         transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+    
+}
+
+@keyframes opaciteInverse {
+    0%  {
+        opacity: 1;
+    }
+    100% {
+       opacity: 0;
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+        }
+
+    100% {
+        transform: scale(0);
+    }
+}
 
 /* Header */
 header {
@@ -256,11 +344,11 @@ nav {
   .emptyheart:hover {
     transition-duration: 2s;
     background: $pink;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    // background-clip: text;
+    // -webkit-background-clip: text;
+    // color: transparent;
     font-weight: bold;
-    background-position: 0px;
+    // background-position: 0px;
   }
 
 .resto__cartes img {
@@ -384,21 +472,134 @@ footer ul li a {
         font-size: 5vw;
         padding-top: 7vw;
         padding-right: 3vw;
+        z-index: 1;
     }
 }
 
-.emptyheart {
-    background-position: 0px 100px;
-    opacity: 1;
-  }
+// .emptyheart {
+//     background-color: red;
+// }
 
-  .emptyheart:hover {
-    transition-duration: 1s;
+.fullheart {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -12vw;
+    font-size: 5vw;
+    padding-top: 7vw;
+    padding-right: 3vw;
+    z-index: 3;
     background: linear-gradient(170deg,$violet, $pink);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-  }
+    opacity: 0;
+} 
+
+.fa-heart:hover {
+    // opacity: 1;
+    cursor: pointer;
+    background-color: rosybrown;
+}
+
+.fa-heart:hover > .emptyheart {
+    opacity: 0;
+}
+
+.fa-heart:hover > .fullheart {
+    opacity: 1;
+}
+
+// .emptyheart:hover > .coeur .fullheart {
+//     opacity: 1;
+//     background-color: rosybrown;
+// }
+// .emptyheart:hover {
+//     animation: scale-in-ver-bottom 0.5s linear 1s both;
+//     background: linear-gradient(170deg,$violet, $pink);
+//     background-clip: text;
+//     -webkit-background-clip: text;
+//     color: transparent;
+// }
+
+// @keyframes scale-in-ver-bottom {
+//     0% {
+//       -webkit-transform: scaleY(0);
+//               transform: scaleY(0);
+//       -webkit-transform-origin: 0% 100%;
+//               transform-origin: 0% 100%;
+//       opacity: 1;
+//     }
+//     100% {
+//       -webkit-transform: scaleY(1);
+//               transform: scaleY(1);
+//       -webkit-transform-origin: 0% 100%;
+//               transform-origin: 0% 100%;
+//       opacity: 1;
+//     }
+//   }
+//   @keyframes scale-in-ver-bottom {
+//     0% {
+//       -webkit-transform: scaleY(0);
+//               transform: scaleY(0);
+//       -webkit-transform-origin: 0% 100%;
+//               transform-origin: 0% 100%;
+//       opacity: 1;
+//     }
+//     100% {
+//       -webkit-transform: scaleY(1);
+//               transform: scaleY(1);
+//       -webkit-transform-origin: 0% 100%;
+//               transform-origin: 0% 100%;
+//       opacity: 1;
+//     }
+//   }
+
+// @keyframes scale-in-ver-bottom {
+//     0% {
+//       -webkit-transform: scaleY(0);
+//               transform: scaleY(0);
+//     //   -webkit-transform-origin: 0% 100%;
+//     //           transform-origin: 0% 100%;
+//       opacity: 1;
+//     }
+//     100% {
+//       -webkit-transform: scaleY(1);
+//               transform: scaleY(1);
+//     //   -webkit-transform-origin: 0% 100%;
+//     //           transform-origin: 0% 100%;
+//       opacity: 1;
+//     }
+//   }
+//   @keyframes scale-in-ver-bottom {
+//     0% {
+//       -webkit-transform: scaleY(0);
+//               transform: scaleY(0);
+//       -webkit-transform-origin: 0% 100%;
+//               transform-origin: 0% 100%;
+//       opacity: 1;
+//     }
+//     100% {
+//       -webkit-transform: scaleY(1);
+//               transform: scaleY(1);
+//       -webkit-transform-origin: 0% 100%;
+//               transform-origin: 0% 100%;
+//       opacity: 1;
+//     }
+
+
+// .emptyheart {
+//     background-position: 0px 100px;
+//     opacity: 1;
+//   }
+
+//   .emptyheart:hover {
+//     transition-duration: 1s;
+//     background: linear-gradient(170deg,$violet, $pink);
+//     // background-clip: text;
+//     // -webkit-background-clip: text;
+//     // color: transparent;
+//   }
 
 .deux {
     display: flex;
@@ -417,7 +618,7 @@ footer ul li a {
 
     &.menus h2 {
         width: 11%;
-        font-size: 3.5vw;
+        font-size: 3.8vw;
         font-weight: normal;
         border-bottom: 3px solid $vert;
         padding-bottom: 1.2vw;
@@ -425,72 +626,113 @@ footer ul li a {
 }
 
 .menus_carte {
+    width: 100%;
+    height: 17vw;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 4px #C0C0C0;
+    margin-bottom: 3vw;
+    animation: opacite 3s linear forwards 2s;
+    overflow: hidden;
+    z-index: 4;
+}
+
+@keyframes opacite {
+    0%  {
+        opacity:0;
+    }
+   100% {
+       opacity:1;
+    }
+}
+
+.text {
+    margin-left: 20px;
+    width: 100%;
+    // height: 20vw;
     display: flex;
     flex-direction: column;
-    margin-bottom: 3vw;
-    height: 15vw;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    position: relative;
-    padding-left: 2vw;
-    box-shadow: 0 4px 4px #C0C0C0;
-        
-        &.menus_carte h3 {
-            font-size: 4vw;
-            margin-bottom: 0;
-            margin-top: 2.8vw;
-            padding-left: 2vw;
-        }
-}
+    flex-wrap: wrap;
+    flex: 1;
+    transition: width 1s;
 
-.menus_leg {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    height: 80px;
-    padding-top: 1vw;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    &.menus_leg h4 {
+    &.text h3 {
+        font-size: 3.6vw;
+        margin-bottom: 1vw; 
+        margin-top: 5vw; 
         width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &.text h4 {
         font-size: 3.4vw;
         font-weight: normal;
-        padding-left: 2vw;
-        display: flex;
-        align-items: center;
-        margin-top: 2vw;
-    }
-
-    &.menus_leg span {
-        font-size: 4vw;
-    }
-
-    &.menus_leg h5 {
-        margin-top: 1vw;
-        font-size: 3vw;
-       margin-top: 0vw;
+        margin-top: 0;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
+
+.text:hover {
+    width: 50%;
+}
+
+// .text:hover h4 {
+//     display: none;
+// }
 
 .prix {
+    // margin-right: 15px;
     width: 10%;
+    height: 18vw;
+    display: flex;
+    // align-items: flex-end;
+    // transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+    transition-timing-function: cubic-bezier(0,0,1,1);
     transition: width 1s;
-    padding-right: 3vw;
-    transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+    
+    &.prix h5 {
+        font-size: 3.3vw;
+        padding-top: 4.5vw;
+    }
 }
+
+// .prix {
+//     position: relative;
+//     top: -16vw;
+//     right: -77vw;
+//     width: 10%;
+//     padding-bottom: 5vw;
+//     // height: 100%;
+//     transition: width 1s;
+//     transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+//     background-color: rgb(0, 255, 213);
+
+//     &.prix h5 {
+//         background-color: yellowgreen;
+//         margin-top: 1vw;
+//         font-size: 3vw;
+//         margin-top: 0vw;
+//         display: flex;
+//         justify-content: flex-end;
+//         align-items: flex-end;
+        
+//     }
+// }
 
 .coche {
         background-color: #99E2D0;
         position: absolute;
-        right: -14vw;
-        top: 0vw;
+        right: -15vw;
+        top: 0;
         margin: 0;
         width: 10%;
         height: 100%;
@@ -499,22 +741,22 @@ footer ul li a {
         align-items: center;
         transition-timing-function: cubic-bezier(0,0,1,1);
         transition: width 1s;
-        padding-left: 4vw;
+        padding-left: 6vw;
 }
 
-.menus_carte:hover > .menus_leg {
+.menus_carte:hover {
     cursor: pointer;
 }
 
-.menus_carte:hover > .menus_leg > .coche {
-    width: 22vw;
+.menus_carte:hover > .coche {
+    width: 25.5vw;
 }
 
-.menus_carte:hover > .menus_leg > .prix {
-   width: 30vw;
+.menus_carte:hover > .prix {
+   width: 28.4vw;
 }
 
-.menus_carte:hover > .menus_leg > .coche > .fa-check-circle {
+.menus_carte:hover > .coche > .fa-check-circle {
     animation: rotation 1s;
 }
 
@@ -530,7 +772,7 @@ footer ul li a {
 .fa-check-circle {
     color: white;
     font-weight: bold;
-    font-size: 4.3vw;
+    font-size: 4.8vw;
 }
 
 // Bouton
