@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass-cours/bureau/desktop.scss:./sass-cours/bureau/desktop.css"
+    "sass": "sass --watch ./sass-cours/bureau/desktop.scss:./sass-cours/bureau/desktop.css",
+    "prefix": "./sass-cours/bureau/desktop.scss:./sass-cours/bureau/desktop.css"
   },
   "author": "",
   "license": "ISC"
