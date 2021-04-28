@@ -308,9 +308,7 @@
         background: linear-gradient($violet, $pink);
         font-weight: bold;
         background-position: 0px;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+        @include colorback;
         cursor: pointer;
     }
 
@@ -481,24 +479,6 @@
         width: 95%;
     }
 
-    .emptyheart:hover {
-        transition-duration: 2s;
-        background: linear-gradient($violet, $pink);
-        font-weight: bold;
-        background-position: 0px;
-        @include colorback;
-        cursor: pointer;
-    }
-
-    .deux {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .pal {
-        width: 95%;
-    }
 // Plats
     .menus {
         margin-left: 4vw;
