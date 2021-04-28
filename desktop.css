@@ -565,6 +565,8 @@
     padding-top: 3.5vw;
     padding-right: 3vw;
     width: 5vw;
+    background-color: white;
+    color: black;
   }
   
   .emptyheart:hover {
