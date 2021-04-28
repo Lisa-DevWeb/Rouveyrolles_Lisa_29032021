@@ -565,9 +565,37 @@
     padding-top: 3.5vw;
     padding-right: 3vw;
     width: 5vw;
+    background-color: white;
+    color: black;
   }
 
   .emptyheart:hover {
+        // transition-duration: 2s;
+        // background: linear-gradient($violet, $pink);
+        // font-weight: bold;
+        // background-position: 0px;
+        // @include colorback;
+        cursor: pointer;
+        animation: fill 900ms ease-in;
+        display: inline-block;
+        background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        font-weight: bold;
+    }
+
+    @keyframes fill {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+  
+/*   .emptyheart:hover {
     transition-duration: 2s;
     background: linear-gradient(#9356DC, #FF79DA);
     font-weight: bold;
@@ -577,7 +605,7 @@
     -webkit-text-fill-color: transparent;
     color: transparent;
     cursor: pointer;
-  }
+  } */
 
   .deux {
     display: flex;
