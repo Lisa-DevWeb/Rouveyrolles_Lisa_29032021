@@ -290,16 +290,20 @@
         font-size: 5vw;
         right: 8vw;
         bottom: 6vw;
+        background-color: white;
+        color: black;
     }
 
     .emptyheart:hover {
-        transition-duration: 2s;
-        background: linear-gradient($violet, $pink);
+        animation: fill 900ms ease-in;
+        display: inline-block;
+        background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
         font-weight: bold;
-        background-position: 0px;
-        @include colorback;
-        cursor: pointer;
     }
+
 
     .resto__cartes img {
         width: 88vw;
@@ -421,17 +425,21 @@
                     padding-top: 7vw;
                     padding-right: 3vw;
                     z-index: 1;
+                    background-color: #e6e6e6;
+                    color: black;
                 }
     }
 
     .emptyheart:hover {
-        transition-duration: 2s;
-        background: linear-gradient($violet, $pink);
+        animation: fill 900ms ease-in;
+        display: inline-block;
+        background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
         font-weight: bold;
-        background-position: 0px;
-        @include colorback;
-        cursor: pointer;
     }
+
 
     .deux {
         display: flex;
