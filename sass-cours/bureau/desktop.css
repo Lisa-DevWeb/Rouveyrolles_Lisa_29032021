@@ -1,3 +1,97 @@
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spiner {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes spiner {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes disapear {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  99% {
+    z-index: 4;
+  }
+  100% {
+    opacity: 0;
+    z-index: -3;
+  }
+}
+@keyframes disapear {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  99% {
+    z-index: 4;
+  }
+  100% {
+    opacity: 0;
+    z-index: -3;
+  }
+}
+@-webkit-keyframes opacite {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacite {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
 @media all and (min-width: 1026px) {
   @font-face {
     font-family: "robotolight";
@@ -18,23 +112,20 @@
   }
 
   .loader {
-    width: 100%;
+    width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    z-index: 4;
+    z-index: 1;
     background: fixed;
     background-attachment: fixed;
-    -webkit-animation: opaciteInverse 3s linear forwards 2s;
-            animation: opaciteInverse 3s linear forwards 2s;
-    -webkit-animation: scale 3s linear forward 2s;
-            animation: scale 3s linear forward 2s;
     position: absolute;
     position: fixed;
+    -webkit-animation: disapear 3s linear forwards;
+            animation: disapear 3s linear forwards;
     background-color: white;
-    transform: scale(0);
   }
 
   .circleRight {
@@ -66,7 +157,6 @@
 
   .chargement {
     position: absolute;
-    top: 50%;
     font-weight: bold;
     font-size: 1.2em;
     color: #40b698;
@@ -74,72 +164,6 @@
     width: 100%;
   }
 
-  @-webkit-keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  @-webkit-keyframes spiner {
-    0% {
-      transform: rotate(360deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-  @keyframes spiner {
-    0% {
-      transform: rotate(360deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-  @-webkit-keyframes opaciteInverse {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @keyframes opaciteInverse {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes scale {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0);
-    }
-  }
-  @keyframes scale {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0);
-    }
-  }
-  /* Header */
   header {
     display: flex;
     justify-content: space-between;
@@ -184,7 +208,6 @@
     background-color: #e6e6e6;
   }
 
-  /*Presentation*/
   .presentation {
     background-color: #F2F2F2;
     display: flex;
@@ -232,7 +255,6 @@
     box-shadow: 0 7px 7px #4e4e4e;
   }
 
-  /*Fonctionnement*/
   .choix {
     display: flex;
     flex-direction: column;
@@ -297,7 +319,6 @@
     color: grey;
   }
 
-  /*Restaurants*/
   .resto {
     background: #F2F2F2;
     display: flex;
@@ -307,6 +328,7 @@
     border-radius: 50px 50px 0 0;
     height: auto;
     padding-bottom: 5vw;
+    position: relative;
   }
 
   .resto h2 {
@@ -372,11 +394,25 @@
     text-align: center;
   }
 
-  .resto .fa-heart {
-    position: absolute;
+  .emptyheart {
+    position: relative;
     font-size: 2.5vw;
-    right: 2vw;
+    right: -23vw;
+    top: -5vw;
     bottom: 2vw;
+    width: 10%;
+    height: auto;
+  }
+
+  .emptyheart:hover {
+    transition-duration: 2s;
+    background: linear-gradient(#9356DC, #FF79DA);
+    font-weight: bold;
+    background-position: 0px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    cursor: pointer;
   }
 
   .resto__cartes img {
@@ -387,18 +423,6 @@
     border-radius: 16px 16px 0 0;
   }
 
-  .emptyheart {
-    background-position: 0px 150px;
-  }
-
-  .emptyheart:hover {
-    transition-duration: 2s;
-    background: linear-gradient(170deg, #9356DC, #FF79DA);
-    font-weight: bold;
-    background-position: 0px;
-  }
-
-  /* Footer */
   footer ul li a {
     display: inline-block;
     list-style-type: none;
@@ -522,33 +546,32 @@
     justify-content: center;
     padding-left: 4vw;
     padding-right: 4vw;
-    border-radius: 15vw;
+    background-color: paleturquoise;
   }
   .tigro.tigro h1 {
     font-family: "Shrikhand";
     font-weight: normal;
-    font-size: 3.5vw;
+    font-size: 4vw;
     width: 80%;
     margin-bottom: 1.6vw;
   }
-  .tigro.tigro .emptyheart {
+  .tigro.tigro .fa-heart {
     display: flex;
     align-items: center;
-    font-size: 3.5vw;
+    font-size: 4vw;
     padding-top: 3.5vw;
     padding-right: 3vw;
   }
 
-  .emptyheart {
-    background-position: 0px 150px;
-    opacity: 1;
-  }
-
   .emptyheart:hover {
     transition-duration: 2s;
-    background: linear-gradient(170deg, #9356DC, #FF79DA);
+    background: linear-gradient(#9356DC, #FF79DA);
     font-weight: bold;
     background-position: 0px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    cursor: pointer;
   }
 
   .deux {
@@ -565,6 +588,7 @@
     margin-left: 4vw;
     width: 92%;
     padding-bottom: 2vw;
+    padding-top: 0;
   }
   .menus.menus h2 {
     width: 11%;
@@ -587,6 +611,7 @@
     margin-bottom: 3vw;
     -webkit-animation: opacite 3s linear forwards 2s;
             animation: opacite 3s linear forwards 2s;
+    z-index: 10;
     overflow: hidden;
   }
 
@@ -622,23 +647,6 @@
     width: 70%;
   }
 
-  @-webkit-keyframes opacite {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes opacite {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
   .prix {
     width: 10%;
     height: 18vw;
@@ -687,23 +695,6 @@
             animation: rotation 1s;
   }
 
-  @-webkit-keyframes rotation {
-    from {
-      -webkit-transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-    }
-  }
-
-  @keyframes rotation {
-    from {
-      -webkit-transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-    }
-  }
   .fa-check-circle {
     color: white;
     font-weight: bold;
