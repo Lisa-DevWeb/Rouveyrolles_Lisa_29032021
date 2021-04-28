@@ -330,18 +330,6 @@
         font-weight: bold;
     }
 
-    @keyframes fill {
-        0% {
-          opacity: 0;
-        }
-        50% {
-          opacity: 0.5;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-
     .resto__cartes img {
         width: 30vw;
         height: 18vw;
@@ -510,18 +498,6 @@
         -webkit-text-fill-color:transparent;
         font-weight: bold;
     }
-
-    @keyframes fill {
-        0% {
-          opacity: 0;
-        }
-        50% {
-          opacity: 0.5;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
 
 
     .deux {

@@ -92,6 +92,28 @@
     -webkit-transform: rotate(360deg);
   }
 }
+@-webkit-keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media all and (min-width: 1026px) {
   @font-face {
     font-family: "robotolight";
@@ -417,29 +439,6 @@
     font-weight: bold;
   }
 
-  @-webkit-keyframes fill {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fill {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
   .resto__cartes img {
     width: 30vw;
     height: 18vw;
@@ -604,29 +603,6 @@
     font-weight: bold;
   }
 
-  @-webkit-keyframes fill {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fill {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
   .deux {
     display: flex;
     justify-content: space-between;
