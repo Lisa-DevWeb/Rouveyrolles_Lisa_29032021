@@ -316,16 +316,31 @@
         bottom: 2vw;
         width: 10%;
         height: auto;
+        background-color: white;
+        color: black;
     }
 
     .emptyheart:hover {
-        transition-duration: 2s;
-        background: linear-gradient($violet, $pink);
+        animation: fill 900ms ease-in;
+        display: inline-block;
+        background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
         font-weight: bold;
-        background-position: 0px;
-        @include colorback;
-        cursor: pointer;
     }
+
+    @keyframes fill {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
 
     .resto__cartes img {
         width: 30vw;
@@ -478,20 +493,36 @@
             display: flex;
             align-items: center;
             font-size: 4vw;
-            padding-top: 3.5vw;
-            padding-right: 3vw;
+            margin-top: 3.5vw;
+            margin-right: 3vw;
             width: 5vw;
+            background-color: #e6e6e6;
+            color: black;
         }
     }
 
     .emptyheart:hover {
-        transition-duration: 2s;
-        background: linear-gradient($violet, $pink);
+        animation: fill 900ms ease-in;
+        display: inline-block;
+        background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
         font-weight: bold;
-        background-position: 0px;
-        @include colorback;
-        cursor: pointer;
     }
+
+    @keyframes fill {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
 
     .deux {
         display: flex;
