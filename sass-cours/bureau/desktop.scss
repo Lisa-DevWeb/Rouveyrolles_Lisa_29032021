@@ -334,7 +334,7 @@
         border-radius: 16px 16px 0 0;
     }
 
-// Footer
+    // Footer
     footer ul li a {
         display: inline-block;
         @include deconone;
@@ -463,21 +463,25 @@
         padding-left: 4vw;
         padding-right: 4vw;
 
-            &.tigro h1 {
-                font-family: 'Shrikhand';
-                font-weight: normal;
-                font-size: 4vw;
-                width: 80%;
-                margin-bottom: 1.6vw;
-            }
+    &.tigro h1 {
+        font-family: 'Shrikhand';
+        font-weight: normal;
+        font-size: 4vw;
+        width: 80%;
+        margin-bottom: 1.6vw;
+    }
 
-                &.tigro .fa-heart {
-                    display: flex;
-                    align-items: center;
-                    font-size: 4vw;
-                    padding-top: 3.5vw;
-                    padding-right: 3vw;
-                }
+        &.tigro .fa-heart {
+            position: relative;
+            left: -3vw;
+            top: 1vw;
+            display: flex;
+            align-items: center;
+            font-size: 4vw;
+            padding-top: 3.5vw;
+            padding-right: 3vw;
+            width: 5vw;
+        }
     }
 
     .emptyheart:hover {
@@ -505,13 +509,13 @@
         padding-bottom: 2vw;
         padding-top: 0;
 
-            &.menus h2 {
-                width: 11%;
-                font-size: 2.6vw;
-                font-weight: normal;
-                border-bottom: 3px solid $vert;
-                padding-bottom: 1.2vw;
-            } 
+        &.menus h2 {
+            width: 11%;
+            font-size: 2.6vw;
+            font-weight: normal;
+            border-bottom: 3px solid $vert;
+            padding-bottom: 1.2vw;
+        } 
     }
 
     .menus_carte {
@@ -539,21 +543,21 @@
         flex-wrap: wrap;
         z-index: 1;
 
-            &.text h3 {
-                font-size: 2.4vw;
-                margin-bottom: 1vw; 
-                padding-top: 4.5vw;
-                width: 100%;
-                @include elmcache;
-            }
+        &.text h3 {
+            font-size: 2.4vw;
+            margin-bottom: 1vw; 
+            padding-top: 4.5vw;
+            width: 100%;
+            @include elmcache;
+        }
 
-                &.text h4 {
-                    font-size: 2vw;
-                    font-weight: normal;
-                    margin-top: 0;
-                    width: 100%;
-                    @include elmcache;
-                }
+        &.text h4 {
+            font-size: 2vw;
+            font-weight: normal;
+            margin-top: 0;
+            width: 100%;
+            @include elmcache;
+        }
     }
 
     .text:hover h4, .text:hover h3 {
