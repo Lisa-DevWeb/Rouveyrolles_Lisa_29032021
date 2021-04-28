@@ -1,4 +1,97 @@
-/* // Extra small devices (portrait phones, less than 576px) */
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spiner {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes spiner {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes disapear {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  99% {
+    z-index: 4;
+  }
+  100% {
+    opacity: 0;
+    z-index: -3;
+  }
+}
+@keyframes disapear {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  99% {
+    z-index: 4;
+  }
+  100% {
+    opacity: 0;
+    z-index: -3;
+  }
+}
+@-webkit-keyframes opacite {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacite {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
 @media all and (max-width: 768px) {
   @font-face {
     font-family: "robotolight";
@@ -28,12 +121,11 @@
     z-index: 1;
     background: fixed;
     background-attachment: fixed;
-    -webkit-animation: opaciteInverse 3s linear forwards 2s;
-            animation: opaciteInverse 3s linear forwards 2s;
-    -webkit-animation: scale 3s linear forward 2s;
-            animation: scale 3s linear forward 2s;
     position: absolute;
     position: fixed;
+    background-color: #5a4e4e;
+    -webkit-animation: disapear 3s linear forwards;
+            animation: disapear 3s linear forwards;
     background-color: white;
   }
 
@@ -44,12 +136,11 @@
     border-radius: 50%;
     width: 200px;
     height: 200px;
-    -webkit-animation: spiner 3s linear infinite;
-            animation: spiner 3s linear infinite;
+    -webkit-animation: spiner 3s linear forwards;
+            animation: spiner 3s linear forwards;
     z-index: 6;
     margin: auto;
     position: absolute;
-    transform: scale(0);
   }
 
   .circleLeft {
@@ -59,11 +150,10 @@
     border-radius: 50%;
     width: 300px;
     height: 300px;
-    -webkit-animation: spin 3s linear infinite;
-            animation: spin 3s linear infinite;
+    -webkit-animation: spin 3s linear forwards;
+            animation: spin 3s linear forwards;
     z-index: 4;
     margin: auto;
-    transform: scale(0);
   }
 
   .chargement {
@@ -75,72 +165,6 @@
     width: 100%;
   }
 
-  @-webkit-keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  @-webkit-keyframes spiner {
-    0% {
-      transform: rotate(360deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-  @keyframes spiner {
-    0% {
-      transform: rotate(360deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-  @-webkit-keyframes opaciteInverse {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @keyframes opaciteInverse {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes scale {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0);
-    }
-  }
-  @keyframes scale {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0);
-    }
-  }
-  /* Header */
   header {
     display: flex;
     justify-content: center;
@@ -182,7 +206,6 @@
     background-color: #e6e6e6;
   }
 
-  /*Presentation*/
   .presentation {
     background-color: #F2F2F2;
     display: flex;
@@ -230,7 +253,6 @@
     box-shadow: 0 7px 7px #4e4e4e;
   }
 
-  /*Fonctionnement*/
   .choix {
     display: flex;
     flex-direction: column;
@@ -290,7 +312,6 @@
     color: grey;
   }
 
-  /*Restaurants*/
   .resto {
     background-color: #e6e6e6;
     display: flex;
@@ -357,15 +378,15 @@
     bottom: 6vw;
   }
 
-  .emptyheart {
-    background-position: 0px 150px;
-    opacity: 1;
-  }
-
   .emptyheart:hover {
     transition-duration: 2s;
-    background: #FF79DA;
+    background: linear-gradient(#9356DC, #FF79DA);
     font-weight: bold;
+    background-position: 0px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    cursor: pointer;
   }
 
   .resto__cartes img {
@@ -376,7 +397,6 @@
     border-radius: 16px 16px 0 0;
   }
 
-  /* Footer */
   footer ul li a {
     display: inline-block;
     list-style-type: none;
@@ -475,7 +495,6 @@
     justify-content: center;
     padding-left: 4vw;
     padding-right: 4vw;
-    border-radius: 15vw;
   }
   .tigro.tigro h1 {
     font-family: "Shrikhand";
@@ -493,33 +512,15 @@
     z-index: 1;
   }
 
-  .fullheart {
-    display: flex;
-    align-items: center;
-    position: relative;
-    top: -12vw;
-    font-size: 5vw;
-    padding-top: 7vw;
-    padding-right: 3vw;
-    z-index: 3;
-    background: linear-gradient(170deg, #9356DC, #FF79DA);
+  .emptyheart:hover {
+    transition-duration: 2s;
+    background: linear-gradient(#9356DC, #FF79DA);
+    font-weight: bold;
+    background-position: 0px;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    opacity: 0;
-  }
-
-  .fa-heart:hover {
     cursor: pointer;
-    background-color: rosybrown;
-  }
-
-  .fa-heart:hover > .emptyheart {
-    opacity: 0;
-  }
-
-  .fa-heart:hover > .fullheart {
-    opacity: 1;
   }
 
   .deux {
@@ -562,23 +563,6 @@
     z-index: 4;
   }
 
-  @-webkit-keyframes opacite {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes opacite {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
   .text {
     margin-left: 20px;
     width: 100%;
@@ -656,23 +640,6 @@
             animation: rotation 1s;
   }
 
-  @-webkit-keyframes rotation {
-    from {
-      -webkit-transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-    }
-  }
-
-  @keyframes rotation {
-    from {
-      -webkit-transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-    }
-  }
   .fa-check-circle {
     color: white;
     font-weight: bold;
